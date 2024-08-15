@@ -1,0 +1,262 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff; /* Light theme background */
+  color: #000000; /* Light theme text color */
+  transition: background-color 0.3s, color 0.3s;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  position: fixed;
+  bottom: 20px; /* Distance from the bottom of the viewport */
+  right: 20px; /* Distance from the right edge of the viewport */
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 0; /* Remove margin to ensure proper placement */
+  z-index: 1000; /* Ensure button is in front of other elements */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners for better touch interaction */
+  background-color: #202122; /* Neutral color for button background */
+  color: #ffffff; /* Button text color */
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Button hover effect */
+button:hover {
+  background-color: #5a6268; /* Darker shade on hover */
+}
+
+/* Button active effect */
+button:active {
+  transform: scale(0.98); /* Slightly shrink button on click */
+}
+
+/* Dark theme button styles */
+.dark-theme button {
+  background-color:  #ffffff; /* Darker neutral color for button in dark theme */
+  color: #495057; /* Light text color for contrast */
+}
+
+.dark-theme button:hover {
+  background-color: #343a40; /* Even darker shade on hover for dark theme */
+  color: #ffffff;
+}
+
+.dark-theme button:active {
+  background-color: #212529; /* Darkest shade on click for dark theme */
+}
+
+/* Sticky button for mobile and tablet */
+@media screen and (max-width: 768px) {
+  button {
+    position: sticky;
+    bottom: 10px; /* Adjust distance from the bottom */
+    right: 10px; /* Adjust distance from the right edge */
+    width: calc(100% - 20px); /* Full width with padding */
+    text-align: center; /* Center the text on small screens */
+    padding: 15px;
+    font-size: 18px; /* Larger font size for better readability */
+    border-radius: 10px; /* Larger border radius for touch-friendly interaction */
+  }
+}
+
+/* Responsive adjustments for mobile and touch-friendly devices */
+@media screen and (max-width: 480px) {
+  button {
+    bottom: 5px; /* Adjust distance from the bottom */
+    right: 5px; /* Adjust distance from the right edge */
+    width: calc(100% - 10px); /* Full width with smaller padding */
+    padding: 12px;
+    font-size: 16px; /* Adjust font size for very small screens */
+  }
+}
+
+/* Android and iOS specific styles */
+@supports (-webkit-touch-callout: none) {
+  button {
+    /* Touch-friendly adjustments for Android and iOS */
+    -webkit-touch-callout: none; /* Disable touch callout on iOS */
+    -webkit-user-select: none; /* Disable text selection on iOS */
+    user-select: none; /* Disable text selection on other touch devices */
+  }
+}
+
+.dark-theme {
+  background-color: #333333; /* Dark theme background */
+  color: #ffffff; /* Dark theme text color */
+}
+
+.dark-theme table {
+  border-color: #555555; /* Dark theme table border color */
+}
+
+.dark-theme th {
+  background-color: #444444;
+}
+
+h2 {
+  text-align: center;
+  font-size: 80px;
+}
+
+/* Table and Column Styles */
+table {
+  width: 60%; /* Ensures the table takes the full width of its container */
+  border-collapse: collapse;
+  margin-bottom: 20px; /* Adds space beneath the table */
+}
+
+th, td {
+  padding: 8px;
+  text-align: center;
+  border: 1px solid black; /* Adds a border to table cells */
+}
+
+/* Column Specific Widths */
+th:nth-child(1), td:nth-child(1) {
+  width: 10%; /* Set width for the first column */
+}
+
+th:nth-child(2), td:nth-child(2) {
+  width: 10%; /* Set width for the second column */
+}
+
+th:nth-child(3), td:nth-child(3) {
+  width: 10%; /* Set width for the third column */
+}
+
+th:nth-child(4), td:nth-child(4) {
+  width: 10%; /* Set width for the fourth column */
+}
+
+th:nth-child(5), td:nth-child(5) {
+  width: 20%; /* Set width for the fifth column */
+}
+
+/* Responsive adjustments for mobile */
+@media screen and (max-width: 600px) {
+  th, td {
+    font-size: 14px; /* Adjust font size for smaller screens */
+    padding: 6px; /* Adjust padding for smaller screens */
+  }
+
+  th:nth-child(1), td:nth-child(1),
+  th:nth-child(2), td:nth-child(2),
+  th:nth-child(3), td:nth-child(3),
+  th:nth-child(4), td:nth-child(4),
+  th:nth-child(5), td:nth-child(5) {
+    width: auto; /* Allow columns to resize based on content */
+  }
+}
+
+.ascii-table {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Clicked link effect */
+a, a:visited {
+  text-decoration: none;
+}
+
+content a, content a:visited {
+  text-decoration: none;
+  color: black;
+  font-family: Fruktur;
+  font-size: 24px;
+}
+
+content a p:hover {
+  background-color: yellow;
+}
+
+/* ======- FOOTER -====== */
+footer {
+  position: relative;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 0.5rem;
+  background-color: #efefef; /* Light mode background color */
+  color: #000000; /* Light mode text color */
+  text-align: center;
+  margin-top: auto; /* Ensures footer sticks to the bottom of the page */
+}
+
+/* Dark mode footer */
+.dark-theme footer {
+  background-color: #222222; /* Dark mode background color */
+  color: #dddddd; /* Dark mode text color */
+}
+
+/* Footer text */
+footer div p {
+  font-family: rubik one;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Footer text color */
+footer div p i.red {
+  color: red;
+  font-size: 24px;
+}
+
+/* Footer text effects */
+footer div p span {
+  transition: background-color 1500ms ease, color 1500ms ease;
+  background-color: black;
+  color: white;
+}
+
+footer div p span:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Footer Image Links */
+footer a.github {
+  transition: color 500ms ease;
+  font-size: 3em;
+  color: black;
+  padding: 10px;
+  display: inline-block;
+}
+
+/* Dark mode GitHub logo */
+.dark-theme footer a.github {
+  color: white; /* Dark mode GitHub logo color */
+}
+
+/* Footer Image Links hover effects */
+footer a.github:hover {
+  color: lightgray;
+}
+
+/* Responsive Footer */
+footer.mobile {
+  display: none;
+}
+
+@media screen and (max-width: 400px) {
+  footer.pc {
+    display: none;
+  }
+  footer.mobile {
+    display: block;
+  }
+  footer.mobile div p {
+    font-size: 15px;
+  }
+}
